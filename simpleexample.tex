@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\author{Slayer's Class}
+\title{Our New Document}
+
+\begin{document}
+\maketitle
+This is where you would type stuff.
+
+\section{The Pythagorean Section}
+I'm going to write the Pythagorean Theorem in-line, like this $a^2+b^2=c^2$.
+
+\subsection{The other subsection}
+Then I'm going to write it as a standalone equation:
+$$a^2+b^2=c^2$$
+
+\subsubsection{where we do the subsubstuff}
+QED.
+
+% there are no subsubsubsections, those are called
+\paragraph{does a paragraph need a curly brace?}
+
+\subsubsection{another important subsection}\label{Sec:important}
+\subsubsection*{yet another one}
+\subsubsection{Is this 1.1.3 or 1.1.4?}
+
+Previously, in subsection~\ref{Sec:important} we discussed the really important stuff.
+
+
+In this section, we will include lists of stuff.
+
+\begin{enumerate}
+\item this is number 1
+\item this is number 2
+\item third thing
+\end{enumerate}
+
+\begin{itemize}
+\item kind of the first thing
+\item kind of the second thing
+\begin{enumerate}
+	\item Here's a nested thing.
+\end{enumerate}
+\item kind of the third thing \cite{HallEffect}
+\end{itemize}
+
+$$\beta_1^{x^2} \cdot \sum_{i=1}^N{\frac{a}{b}}$$
+
+%\includegraphics[width=\paperwidth]{./Document/frog.jpg}
+\includegraphics[scale=0.3]{./Document/frog.jpg}
+
+\bibliographystyle{plainnat}
+\bibliography{./presentation/refs}
+Really, you'd want to manage this with JabRef, mostly likely. It's free.
+
+\end{document}
