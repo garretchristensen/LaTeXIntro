@@ -1,7 +1,7 @@
 # Intro to LaTeX
 Adapted by [Garret Christensen](http://www.ocf.berkeley.edu/~garret) from [materials](https://github.com/thehackerwithin/berkeley/tree/master/LaTeX) by Lawrence Lewis, Katy Huff, and Rachel Slaybaugh.
 
-## What is in this Directory?
+## 1. What is in this Directory?
 There's a document, two presentations ('presentation'--an intro presentation and 'bodies'--some details on floats) and a poster (very alpha), which is meant to show the basics of LaTeX.
 
 
@@ -26,8 +26,23 @@ There are a lot of markup languages. They all do different things. Restructured
 text is the standard in the world of python documentation. Markdown is the
 standard on github. Pick your poison.
 -->
+## 2. What is LaTeX and why would I want to use it?
+LaTeX is a markup language for typesetting. It's not a WYSIWYG like most word processors (i.e MS Word). To some extent, you worry about the content and let the engine handle the layout. Really: it's like programming--if you put in the effort to get up the learning curve, you save time in the end by automating your document creation.
 
-## How Do I install LaTeX?
+I use it because:
+ 1. LaTeX handles citations for you.
+ 2. LaTeX handles numbering, labels/references, table of contents, etc. for you.
+ 3. LaTeX does beautiful math.
+ 4. LaTeX is beautiful all around.
+ 5. LaTeX doesn't bog down with long docs like MS Word.
+
+
+I still find it frustrating because:
+  1. It's got a learning curve.
+  2. Error messages feel cryptic. (But less cryptic than Word just doing something inexplicable. https://twitter.com/gossipgriII/status/713425874167537664)
+  3. I haven't mastered collaborative editing yet, but solutions exist.
+
+## 3. How do I install LaTeX?
 [For some reason](http://tex.stackexchange.com/questions/974/why-is-the-mactex-distribution-so-large-is-there-anything-smaller-for-os-x), LaTeX takes up over a gigabyte, so installing may take a few minutes.
 
 ### Linux
@@ -47,7 +62,7 @@ the website.
 
 Install [MikTeX](http://miktex.org/).
 
-## How do I write LaTeX?
+## 4. How do I write LaTeX?
 
 http://tobi.oetiker.ch/lshort/lshort.pdf
 
@@ -63,11 +78,27 @@ http://tobi.oetiker.ch/lshort/lshort.pdf
 
 Some folks will find the text editor option the most extensible and glorious. More power to them, but I am not one of those folks. (You'd just type pdflatex *filename.tex* in the command line to compile.)
 
-## How do I pronounce $\LaTeX$?
+## 5. How do I pronounce LaTeX?
 
 Check it out, the last letter is the Greek letter $$\Chi$$. So, it definitely has to end in a K sound. But, is it Lay or Lah? The developers say it's up to you.
 
-## What are the Parts of a Document?
+## 6. Stuff we'll try to cover
+  1. Make a basic doc
+  2. documentclass (article, beamer, exam, letter, book, *others*)
+  3. preamble
+  4. include packages
+  5. sections, subsections
+  6. labels, refs
+  7. itemize, enumerate
+  8. math, equations
+  8. include, includegraphics, input
+  9. bibliography
+  10. floats
+    1. table
+    2. figure
+
+
+## 7. What are the Parts of a Document?
 
 LaTeX documents have numerous parts.
 
@@ -107,8 +138,7 @@ You must begin and end the document.
 
 
 Now, that's it. To create a beautiful pdf, you can place this text in a file
-called doc.tex, type "latex doc.tex" to create a dvi file, then type dvi2pdf to
-create a pdf file.
+called doc.tex, and type "pdflatex doc.tex". You can also use the "latex" command to make DVI output, but I don't know what that is or why you'd want to.
 
 ### The Title Elements
 
@@ -143,7 +173,7 @@ within the document boundaries.
 
 ### Books, Chapters, Sections, Subsections, Subsubsections, and Paragraphs
 
-These are enviroments that define the hierarchy of your document.
+These are environments that define the hierarchy of your document.
 
 
 ### Include and input
